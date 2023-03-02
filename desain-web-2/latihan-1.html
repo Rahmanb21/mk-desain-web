@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 1</title>
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <!-- CSS Styling -->
+    <style>
+      .latihan-1-area {
+        width: 90%;
+        margin: 4rem auto;
+      }
+
+      table {
+        width: 100%;
+        text-align: center;
+        min-width: 600px;
+      }
+
+      .text-start {
+        text-align: start;
+      }
+
+      table,
+      th,
+      tr,
+      td {
+        border: 1px solid;
+      }
+
+      tr th {
+        padding-bottom: 24px;
+      }
+
+      .stats-color {
+        color: white;
+      }
+
+      .stats-ban {
+        background-color: #cc0000;
+      }
+
+      .stats-pending {
+        background-color: #ff9900;
+      }
+
+      .stats-active {
+        background-color: #006600;
+      }
+
+      td a {
+        text-decoration: none;
+        color: white;
+        border: 1px solid black;
+        padding: 2px 4px;
+      }
+
+      a i {
+        padding-right: 4px;
+      }
+
+      .act-view {
+        background-color: #008000;
+      }
+
+      .act-edit {
+        background-color: #0000ff;
+      }
+
+      .act-delete {
+        background-color: #ff0000;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="latihan-1-area">
+      <h2>Latihan 1</h2>
+      <!-- Tabel -->
+      <table cellpadding="4">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Date Registered</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="text-start">Abdullah</td>
+            <td>2012/02/01</td>
+            <td>Staff</td>
+            <td><span class="stats-ban stats-color">Banned</span></td>
+            <td>
+              <a href="" class="act-view"><i class="bi bi-eye-fill"></i>View</a>
+              <a href="" class="act-edit"><i class="bi bi-pencil-square"></i>Edit</a>
+              <a href="" class="act-delete"><i class="bi bi-trash3-fill"></i>Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Abraham</td>
+            <td>2012/03/01</td>
+            <td>Member</td>
+            <td><span class="stats-pending stats-color">Pending</span></td>
+            <td>
+              <a href="" class="act-view"><i class="bi bi-eye-fill"></i>View</a>
+              <a href="" class="act-edit"><i class="bi bi-pencil-square"></i>Edit</a>
+              <a href="" class="act-delete"><i class="bi bi-trash3-fill"></i>Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Ahemd Saruar</td>
+            <td>2012/03/01</td>
+            <td>Member</td>
+            <td><span class="stats-pending stats-color">Pending</span></td>
+            <td>
+              <a href="" class="act-view"><i class="bi bi-eye-fill"></i>View</a>
+              <a href="" class="act-edit"><i class="bi bi-pencil-square"></i>Edit</a>
+              <a href="" class="act-delete"><i class="bi bi-trash3-fill"></i>Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Amrin Sana</td>
+            <td>2012/08/23</td>
+            <td>Staff</td>
+            <td><span class="stats-ban stats-color">Banned</span></td>
+            <td>
+              <a href="" class="act-view"><i class="bi bi-eye-fill"></i>View</a>
+              <a href="" class="act-edit"><i class="bi bi-pencil-square"></i>Edit</a>
+              <a href="" class="act-delete"><i class="bi bi-trash3-fill"></i>Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Andro Christopher</td>
+            <td>2012/08/23</td>
+            <td>Staff</td>
+            <td><span class="stats-ban stats-color">Banned</span></td>
+            <td>
+              <a href="" class="act-view"><i class="bi bi-eye-fill"></i>View</a>
+              <a href="" class="act-edit"><i class="bi bi-pencil-square"></i>Edit</a>
+              <a href="" class="act-delete"><i class="bi bi-trash3-fill"></i>Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Brown Blue</td>
+            <td>2012/03/01</td>
+            <td>Member</td>
+            <td><span class="stats-pending stats-color">Pending</span></td>
+            <td>
+              <a href="" class="act-view"><i class="bi bi-eye-fill"></i>View</a>
+              <a href="" class="act-edit"><i class="bi bi-pencil-square"></i>Edit</a>
+              <a href="" class="act-delete"><i class="bi bi-trash3-fill"></i>Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Brown Robert</td>
+            <td>2012/03/01</td>
+            <td>Member</td>
+            <td><span class="stats-pending stats-color">Pending</span></td>
+            <td>
+              <a href="" class="act-view"><i class="bi bi-eye-fill"></i>View</a>
+              <a href="" class="act-edit"><i class="bi bi-pencil-square"></i>Edit</a>
+              <a href="" class="act-delete"><i class="bi bi-trash3-fill"></i>Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Chris Jack</td>
+            <td>2012/01/01</td>
+            <td>Member</td>
+            <td><span class="stats-active stats-color">Active</span></td>
+            <td>
+              <a href="" class="act-view"><i class="bi bi-eye-fill"></i>View</a>
+              <a href="" class="act-edit"><i class="bi bi-pencil-square"></i>Edit</a>
+              <a href="" class="act-delete"><i class="bi bi-trash3-fill"></i>Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Christopher</td>
+            <td>2012/08/23</td>
+            <td>Staff</td>
+            <td><span class="stats-ban stats-color">Banned</span></td>
+            <td>
+              <a href="" class="act-view"><i class="bi bi-eye-fill"></i>View</a>
+              <a href="" class="act-edit"><i class="bi bi-pencil-square"></i>Edit</a>
+              <a href="" class="act-delete"><i class="bi bi-trash3-fill"></i>Delete</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Dave Robert</td>
+            <td>2012/03/01</td>
+            <td>Member</td>
+            <td><span class="stats-pending stats-color">Pending</span></td>
+            <td>
+              <a href="" class="act-view"><i class="bi bi-eye-fill"></i>View</a>
+              <a href="" class="act-edit"><i class="bi bi-pencil-square"></i>Edit</a>
+              <a href="" class="act-delete"><i class="bi bi-trash3-fill"></i>Delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>

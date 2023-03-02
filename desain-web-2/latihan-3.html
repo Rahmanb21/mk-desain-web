@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 3</title>
+
+    <!-- CSS Styling -->
+    <style>
+      .latihan-3-area {
+        width: 90%;
+        margin: 2rem auto;
+      }
+
+      table {
+        width: 100%;
+        text-align: center;
+        min-width: 760px;
+      }
+
+      .text-start,
+      .page {
+        text-align: start;
+      }
+
+      table,
+      th,
+      tr,
+      td {
+        border: 1px solid;
+      }
+
+      tr th {
+        padding: 8px;
+      }
+
+      td .page {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+
+      .bg-gray {
+        background-color: #f7f7f7;
+      }
+
+      .stats-color {
+        color: white;
+      }
+
+      .stats-ban {
+        background-color: #cc0000;
+      }
+
+      .stats-pending {
+        background-color: #ff9900;
+      }
+
+      .stats-active {
+        background-color: #006600;
+      }
+
+      td a {
+        text-decoration: none;
+        color: white;
+        border: 1px solid black;
+        display: inline-block;
+        padding: 2px 4px;
+        width: auto;
+      }
+
+      .act-view {
+        background-color: #008000;
+      }
+
+      .act-edit {
+        background-color: #0000ff;
+      }
+
+      .act-delete {
+        background-color: #ff0000;
+      }
+
+      a svg {
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="latihan-3-area">
+      <h2>Latihan 3</h2>
+      <!-- Tabel -->
+      <table cellpadding="4">
+        <thead>
+          <tr>
+            <td colspan="5" class="page">Members</td>
+          </tr>
+          <tr>
+            <td colspan="5" class="page">
+              <select name="page-select" id="page-select">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+              <label for="page-select">records per page</label>
+            </td>
+          </tr>
+          <tr>
+            <th class="text-start">Username</th>
+            <th class="text-start">Date Registered</th>
+            <th class="text-start">Role</th>
+            <th class="text-start">Status</th>
+            <th class="text-start">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="bg-gray">
+            <td class="text-start">Abdullah</td>
+            <td>2012/02/01</td>
+            <td>Staff</td>
+            <td><span class="stats-ban stats-color">Banned</span></td>
+            <td>
+              <a href="" class="act-view">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>70 Basic icons by Xicons.co</title>
+                    <path d="M46.86,20.06C43.58,11.9,33.13,5,24,5S4.32,12,1.13,20.28a2,2,0,0,0,0,1.44C4.32,30,14.81,37,24,37s19.54-6.9,22.82-15.06A2,2,0,0,0,47,21.2V20.8A2,2,0,0,0,46.86,20.06Z" fill="#e7e9e9"></path>
+                    <circle cx="24" cy="21" r="5" fill="#231f20"></circle>
+                    <path d="M24,30a9,9,0,1,1,9-9A9,9,0,0,1,24,30Zm0-14a5,5,0,1,0,5,5A5,5,0,0,0,24,16Z" fill="#4dbe86"></path>
+                    <circle cx="20" cy="18" r="2" fill="#ffffff"></circle>
+                  </g>
+                </svg>
+                View
+              </a>
+              <a href="" class="act-edit">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      style="fill: #bfd1fd"
+                      d="M357.382,0H54.545C35.838,0,20.673,15.165,20.673,33.873v444.254 c0,18.708,15.165,33.873,33.873,33.873h302.838c18.708,0,33.873-15.165,33.873-33.873V33.873C391.255,15.165,376.09,0,357.382,0z"
+                    ></path>
+                    <path style="opacity: 0.1; enable-background: new" d="M391.255,99.394c-10.762,2.762-20.632,8.355-28.694,16.417L153.007,325.365 l-4.738,149.902l149.903-4.736l93.084-93.083V99.394H391.255z"></path>
+                    <path style="fill: #ff999a" d="M483.12,196.748l-56.33-56.33c-10.942-10.942-28.681-10.942-39.622,0l-31.298,31.296l26.653,69.3 l69.3,26.653l31.298-31.298C494.062,225.429,494.062,207.69,483.12,196.748z"></path>
+                    <polygon style="fill: #ffebbf" points="184.221,439.317 187.353,340.232 217.138,310.446 313.091,406.399 283.306,436.185 "></polygon>
+                    <polygon style="fill: #ffd782" points="283.306,436.185 187.353,340.232 315.416,212.169 382.524,241.014 411.369,308.121 "></polygon>
+                    <rect x="315.764" y="211.31" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 485.226 680.8143)" style="fill: #575866" width="135.7" height="57.208"></rect>
+                    <path
+                      style="opacity: 0.1; enable-background: new"
+                      d="M483.12,196.748l-41.01-41.01c10.942,10.942,10.942,28.681,0,39.622 L242.295,395.174l-56.736,1.793l-1.339,42.348l99.085-3.132L483.119,236.37C494.062,225.429,494.062,207.689,483.12,196.748z"
+                    ></path>
+                  </g>
+                </svg>
+                Edit
+              </a>
+              <a href="" class="act-delete">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                    <path d="M9 10V44H39V10H9Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                    <path d="M20 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4 10H44" stroke="#5e2c2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10L19.289 4H28.7771L32 10H16Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Delete
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Abraham</td>
+            <td>2012/04/05</td>
+            <td>Member</td>
+            <td><span class="stats-pending stats-color">Pending</span></td>
+            <td>
+              <a href="" class="act-view">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>70 Basic icons by Xicons.co</title>
+                    <path d="M46.86,20.06C43.58,11.9,33.13,5,24,5S4.32,12,1.13,20.28a2,2,0,0,0,0,1.44C4.32,30,14.81,37,24,37s19.54-6.9,22.82-15.06A2,2,0,0,0,47,21.2V20.8A2,2,0,0,0,46.86,20.06Z" fill="#e7e9e9"></path>
+                    <circle cx="24" cy="21" r="5" fill="#231f20"></circle>
+                    <path d="M24,30a9,9,0,1,1,9-9A9,9,0,0,1,24,30Zm0-14a5,5,0,1,0,5,5A5,5,0,0,0,24,16Z" fill="#4dbe86"></path>
+                    <circle cx="20" cy="18" r="2" fill="#ffffff"></circle>
+                  </g>
+                </svg>
+                View
+              </a>
+              <a href="" class="act-edit">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      style="fill: #bfd1fd"
+                      d="M357.382,0H54.545C35.838,0,20.673,15.165,20.673,33.873v444.254 c0,18.708,15.165,33.873,33.873,33.873h302.838c18.708,0,33.873-15.165,33.873-33.873V33.873C391.255,15.165,376.09,0,357.382,0z"
+                    ></path>
+                    <path style="opacity: 0.1; enable-background: new" d="M391.255,99.394c-10.762,2.762-20.632,8.355-28.694,16.417L153.007,325.365 l-4.738,149.902l149.903-4.736l93.084-93.083V99.394H391.255z"></path>
+                    <path style="fill: #ff999a" d="M483.12,196.748l-56.33-56.33c-10.942-10.942-28.681-10.942-39.622,0l-31.298,31.296l26.653,69.3 l69.3,26.653l31.298-31.298C494.062,225.429,494.062,207.69,483.12,196.748z"></path>
+                    <polygon style="fill: #ffebbf" points="184.221,439.317 187.353,340.232 217.138,310.446 313.091,406.399 283.306,436.185 "></polygon>
+                    <polygon style="fill: #ffd782" points="283.306,436.185 187.353,340.232 315.416,212.169 382.524,241.014 411.369,308.121 "></polygon>
+                    <rect x="315.764" y="211.31" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 485.226 680.8143)" style="fill: #575866" width="135.7" height="57.208"></rect>
+                    <path
+                      style="opacity: 0.1; enable-background: new"
+                      d="M483.12,196.748l-41.01-41.01c10.942,10.942,10.942,28.681,0,39.622 L242.295,395.174l-56.736,1.793l-1.339,42.348l99.085-3.132L483.119,236.37C494.062,225.429,494.062,207.689,483.12,196.748z"
+                    ></path>
+                  </g>
+                </svg>
+                Edit
+              </a>
+              <a href="" class="act-delete">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                    <path d="M9 10V44H39V10H9Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                    <path d="M20 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4 10H44" stroke="#5e2c2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10L19.289 4H28.7771L32 10H16Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Delete
+              </a>
+            </td>
+          </tr>
+          <tr class="bg-gray">
+            <td class="text-start">Ahemd Saruar</td>
+            <td>2012/02/01</td>
+            <td>Member</td>
+            <td><span class="stats-pending stats-color">Pending</span></td>
+            <td>
+              <a href="" class="act-view">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>70 Basic icons by Xicons.co</title>
+                    <path d="M46.86,20.06C43.58,11.9,33.13,5,24,5S4.32,12,1.13,20.28a2,2,0,0,0,0,1.44C4.32,30,14.81,37,24,37s19.54-6.9,22.82-15.06A2,2,0,0,0,47,21.2V20.8A2,2,0,0,0,46.86,20.06Z" fill="#e7e9e9"></path>
+                    <circle cx="24" cy="21" r="5" fill="#231f20"></circle>
+                    <path d="M24,30a9,9,0,1,1,9-9A9,9,0,0,1,24,30Zm0-14a5,5,0,1,0,5,5A5,5,0,0,0,24,16Z" fill="#4dbe86"></path>
+                    <circle cx="20" cy="18" r="2" fill="#ffffff"></circle>
+                  </g>
+                </svg>
+                View
+              </a>
+              <a href="" class="act-edit">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      style="fill: #bfd1fd"
+                      d="M357.382,0H54.545C35.838,0,20.673,15.165,20.673,33.873v444.254 c0,18.708,15.165,33.873,33.873,33.873h302.838c18.708,0,33.873-15.165,33.873-33.873V33.873C391.255,15.165,376.09,0,357.382,0z"
+                    ></path>
+                    <path style="opacity: 0.1; enable-background: new" d="M391.255,99.394c-10.762,2.762-20.632,8.355-28.694,16.417L153.007,325.365 l-4.738,149.902l149.903-4.736l93.084-93.083V99.394H391.255z"></path>
+                    <path style="fill: #ff999a" d="M483.12,196.748l-56.33-56.33c-10.942-10.942-28.681-10.942-39.622,0l-31.298,31.296l26.653,69.3 l69.3,26.653l31.298-31.298C494.062,225.429,494.062,207.69,483.12,196.748z"></path>
+                    <polygon style="fill: #ffebbf" points="184.221,439.317 187.353,340.232 217.138,310.446 313.091,406.399 283.306,436.185 "></polygon>
+                    <polygon style="fill: #ffd782" points="283.306,436.185 187.353,340.232 315.416,212.169 382.524,241.014 411.369,308.121 "></polygon>
+                    <rect x="315.764" y="211.31" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 485.226 680.8143)" style="fill: #575866" width="135.7" height="57.208"></rect>
+                    <path
+                      style="opacity: 0.1; enable-background: new"
+                      d="M483.12,196.748l-41.01-41.01c10.942,10.942,10.942,28.681,0,39.622 L242.295,395.174l-56.736,1.793l-1.339,42.348l99.085-3.132L483.119,236.37C494.062,225.429,494.062,207.689,483.12,196.748z"
+                    ></path>
+                  </g>
+                </svg>
+                Edit
+              </a>
+              <a href="" class="act-delete">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                    <path d="M9 10V44H39V10H9Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                    <path d="M20 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4 10H44" stroke="#5e2c2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10L19.289 4H28.7771L32 10H16Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Delete
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Amrin Sana</td>
+            <td>2012/08/23</td>
+            <td>Staff</td>
+            <td><span class="stats-ban stats-color">Banned</span></td>
+            <td>
+              <a href="" class="act-view">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>70 Basic icons by Xicons.co</title>
+                    <path d="M46.86,20.06C43.58,11.9,33.13,5,24,5S4.32,12,1.13,20.28a2,2,0,0,0,0,1.44C4.32,30,14.81,37,24,37s19.54-6.9,22.82-15.06A2,2,0,0,0,47,21.2V20.8A2,2,0,0,0,46.86,20.06Z" fill="#e7e9e9"></path>
+                    <circle cx="24" cy="21" r="5" fill="#231f20"></circle>
+                    <path d="M24,30a9,9,0,1,1,9-9A9,9,0,0,1,24,30Zm0-14a5,5,0,1,0,5,5A5,5,0,0,0,24,16Z" fill="#4dbe86"></path>
+                    <circle cx="20" cy="18" r="2" fill="#ffffff"></circle>
+                  </g>
+                </svg>
+                View
+              </a>
+              <a href="" class="act-edit">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      style="fill: #bfd1fd"
+                      d="M357.382,0H54.545C35.838,0,20.673,15.165,20.673,33.873v444.254 c0,18.708,15.165,33.873,33.873,33.873h302.838c18.708,0,33.873-15.165,33.873-33.873V33.873C391.255,15.165,376.09,0,357.382,0z"
+                    ></path>
+                    <path style="opacity: 0.1; enable-background: new" d="M391.255,99.394c-10.762,2.762-20.632,8.355-28.694,16.417L153.007,325.365 l-4.738,149.902l149.903-4.736l93.084-93.083V99.394H391.255z"></path>
+                    <path style="fill: #ff999a" d="M483.12,196.748l-56.33-56.33c-10.942-10.942-28.681-10.942-39.622,0l-31.298,31.296l26.653,69.3 l69.3,26.653l31.298-31.298C494.062,225.429,494.062,207.69,483.12,196.748z"></path>
+                    <polygon style="fill: #ffebbf" points="184.221,439.317 187.353,340.232 217.138,310.446 313.091,406.399 283.306,436.185 "></polygon>
+                    <polygon style="fill: #ffd782" points="283.306,436.185 187.353,340.232 315.416,212.169 382.524,241.014 411.369,308.121 "></polygon>
+                    <rect x="315.764" y="211.31" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 485.226 680.8143)" style="fill: #575866" width="135.7" height="57.208"></rect>
+                    <path
+                      style="opacity: 0.1; enable-background: new"
+                      d="M483.12,196.748l-41.01-41.01c10.942,10.942,10.942,28.681,0,39.622 L242.295,395.174l-56.736,1.793l-1.339,42.348l99.085-3.132L483.119,236.37C494.062,225.429,494.062,207.689,483.12,196.748z"
+                    ></path>
+                  </g>
+                </svg>
+                Edit
+              </a>
+              <a href="" class="act-delete">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                    <path d="M9 10V44H39V10H9Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                    <path d="M20 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4 10H44" stroke="#5e2c2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10L19.289 4H28.7771L32 10H16Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Delete
+              </a>
+            </td>
+          </tr>
+          <tr class="bg-gray">
+            <td class="text-start">Andro Christopher</td>
+            <td>2012/08/23</td>
+            <td>Staff</td>
+            <td><span class="stats-ban stats-color">Banned</span></td>
+            <td>
+              <a href="" class="act-view">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>70 Basic icons by Xicons.co</title>
+                    <path d="M46.86,20.06C43.58,11.9,33.13,5,24,5S4.32,12,1.13,20.28a2,2,0,0,0,0,1.44C4.32,30,14.81,37,24,37s19.54-6.9,22.82-15.06A2,2,0,0,0,47,21.2V20.8A2,2,0,0,0,46.86,20.06Z" fill="#e7e9e9"></path>
+                    <circle cx="24" cy="21" r="5" fill="#231f20"></circle>
+                    <path d="M24,30a9,9,0,1,1,9-9A9,9,0,0,1,24,30Zm0-14a5,5,0,1,0,5,5A5,5,0,0,0,24,16Z" fill="#4dbe86"></path>
+                    <circle cx="20" cy="18" r="2" fill="#ffffff"></circle>
+                  </g>
+                </svg>
+                View
+              </a>
+              <a href="" class="act-edit">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      style="fill: #bfd1fd"
+                      d="M357.382,0H54.545C35.838,0,20.673,15.165,20.673,33.873v444.254 c0,18.708,15.165,33.873,33.873,33.873h302.838c18.708,0,33.873-15.165,33.873-33.873V33.873C391.255,15.165,376.09,0,357.382,0z"
+                    ></path>
+                    <path style="opacity: 0.1; enable-background: new" d="M391.255,99.394c-10.762,2.762-20.632,8.355-28.694,16.417L153.007,325.365 l-4.738,149.902l149.903-4.736l93.084-93.083V99.394H391.255z"></path>
+                    <path style="fill: #ff999a" d="M483.12,196.748l-56.33-56.33c-10.942-10.942-28.681-10.942-39.622,0l-31.298,31.296l26.653,69.3 l69.3,26.653l31.298-31.298C494.062,225.429,494.062,207.69,483.12,196.748z"></path>
+                    <polygon style="fill: #ffebbf" points="184.221,439.317 187.353,340.232 217.138,310.446 313.091,406.399 283.306,436.185 "></polygon>
+                    <polygon style="fill: #ffd782" points="283.306,436.185 187.353,340.232 315.416,212.169 382.524,241.014 411.369,308.121 "></polygon>
+                    <rect x="315.764" y="211.31" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 485.226 680.8143)" style="fill: #575866" width="135.7" height="57.208"></rect>
+                    <path
+                      style="opacity: 0.1; enable-background: new"
+                      d="M483.12,196.748l-41.01-41.01c10.942,10.942,10.942,28.681,0,39.622 L242.295,395.174l-56.736,1.793l-1.339,42.348l99.085-3.132L483.119,236.37C494.062,225.429,494.062,207.689,483.12,196.748z"
+                    ></path>
+                  </g>
+                </svg>
+                Edit
+              </a>
+              <a href="" class="act-delete">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                    <path d="M9 10V44H39V10H9Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                    <path d="M20 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4 10H44" stroke="#5e2c2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10L19.289 4H28.7771L32 10H16Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Delete
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Brown Blue</td>
+            <td>2012/03/01</td>
+            <td>Staff</td>
+            <td><span class="stats-pending stats-color">Pending</span></td>
+            <td>
+              <a href="" class="act-view">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>70 Basic icons by Xicons.co</title>
+                    <path d="M46.86,20.06C43.58,11.9,33.13,5,24,5S4.32,12,1.13,20.28a2,2,0,0,0,0,1.44C4.32,30,14.81,37,24,37s19.54-6.9,22.82-15.06A2,2,0,0,0,47,21.2V20.8A2,2,0,0,0,46.86,20.06Z" fill="#e7e9e9"></path>
+                    <circle cx="24" cy="21" r="5" fill="#231f20"></circle>
+                    <path d="M24,30a9,9,0,1,1,9-9A9,9,0,0,1,24,30Zm0-14a5,5,0,1,0,5,5A5,5,0,0,0,24,16Z" fill="#4dbe86"></path>
+                    <circle cx="20" cy="18" r="2" fill="#ffffff"></circle>
+                  </g>
+                </svg>
+                View
+              </a>
+              <a href="" class="act-edit">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      style="fill: #bfd1fd"
+                      d="M357.382,0H54.545C35.838,0,20.673,15.165,20.673,33.873v444.254 c0,18.708,15.165,33.873,33.873,33.873h302.838c18.708,0,33.873-15.165,33.873-33.873V33.873C391.255,15.165,376.09,0,357.382,0z"
+                    ></path>
+                    <path style="opacity: 0.1; enable-background: new" d="M391.255,99.394c-10.762,2.762-20.632,8.355-28.694,16.417L153.007,325.365 l-4.738,149.902l149.903-4.736l93.084-93.083V99.394H391.255z"></path>
+                    <path style="fill: #ff999a" d="M483.12,196.748l-56.33-56.33c-10.942-10.942-28.681-10.942-39.622,0l-31.298,31.296l26.653,69.3 l69.3,26.653l31.298-31.298C494.062,225.429,494.062,207.69,483.12,196.748z"></path>
+                    <polygon style="fill: #ffebbf" points="184.221,439.317 187.353,340.232 217.138,310.446 313.091,406.399 283.306,436.185 "></polygon>
+                    <polygon style="fill: #ffd782" points="283.306,436.185 187.353,340.232 315.416,212.169 382.524,241.014 411.369,308.121 "></polygon>
+                    <rect x="315.764" y="211.31" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 485.226 680.8143)" style="fill: #575866" width="135.7" height="57.208"></rect>
+                    <path
+                      style="opacity: 0.1; enable-background: new"
+                      d="M483.12,196.748l-41.01-41.01c10.942,10.942,10.942,28.681,0,39.622 L242.295,395.174l-56.736,1.793l-1.339,42.348l99.085-3.132L483.119,236.37C494.062,225.429,494.062,207.689,483.12,196.748z"
+                    ></path>
+                  </g>
+                </svg>
+                Edit
+              </a>
+              <a href="" class="act-delete">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                    <path d="M9 10V44H39V10H9Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                    <path d="M20 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4 10H44" stroke="#5e2c2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10L19.289 4H28.7771L32 10H16Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Delete
+              </a>
+            </td>
+          </tr>
+          <tr class="bg-gray">
+            <td class="text-start">Brown Robert</td>
+            <td>2012/03/01</td>
+            <td>Karyawan</td>
+            <td><span class="stats-pending stats-color">Pending</span></td>
+            <td>
+              <a href="" class="act-view">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>70 Basic icons by Xicons.co</title>
+                    <path d="M46.86,20.06C43.58,11.9,33.13,5,24,5S4.32,12,1.13,20.28a2,2,0,0,0,0,1.44C4.32,30,14.81,37,24,37s19.54-6.9,22.82-15.06A2,2,0,0,0,47,21.2V20.8A2,2,0,0,0,46.86,20.06Z" fill="#e7e9e9"></path>
+                    <circle cx="24" cy="21" r="5" fill="#231f20"></circle>
+                    <path d="M24,30a9,9,0,1,1,9-9A9,9,0,0,1,24,30Zm0-14a5,5,0,1,0,5,5A5,5,0,0,0,24,16Z" fill="#4dbe86"></path>
+                    <circle cx="20" cy="18" r="2" fill="#ffffff"></circle>
+                  </g>
+                </svg>
+                View
+              </a>
+              <a href="" class="act-edit">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      style="fill: #bfd1fd"
+                      d="M357.382,0H54.545C35.838,0,20.673,15.165,20.673,33.873v444.254 c0,18.708,15.165,33.873,33.873,33.873h302.838c18.708,0,33.873-15.165,33.873-33.873V33.873C391.255,15.165,376.09,0,357.382,0z"
+                    ></path>
+                    <path style="opacity: 0.1; enable-background: new" d="M391.255,99.394c-10.762,2.762-20.632,8.355-28.694,16.417L153.007,325.365 l-4.738,149.902l149.903-4.736l93.084-93.083V99.394H391.255z"></path>
+                    <path style="fill: #ff999a" d="M483.12,196.748l-56.33-56.33c-10.942-10.942-28.681-10.942-39.622,0l-31.298,31.296l26.653,69.3 l69.3,26.653l31.298-31.298C494.062,225.429,494.062,207.69,483.12,196.748z"></path>
+                    <polygon style="fill: #ffebbf" points="184.221,439.317 187.353,340.232 217.138,310.446 313.091,406.399 283.306,436.185 "></polygon>
+                    <polygon style="fill: #ffd782" points="283.306,436.185 187.353,340.232 315.416,212.169 382.524,241.014 411.369,308.121 "></polygon>
+                    <rect x="315.764" y="211.31" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 485.226 680.8143)" style="fill: #575866" width="135.7" height="57.208"></rect>
+                    <path
+                      style="opacity: 0.1; enable-background: new"
+                      d="M483.12,196.748l-41.01-41.01c10.942,10.942,10.942,28.681,0,39.622 L242.295,395.174l-56.736,1.793l-1.339,42.348l99.085-3.132L483.119,236.37C494.062,225.429,494.062,207.689,483.12,196.748z"
+                    ></path>
+                  </g>
+                </svg>
+                Edit
+              </a>
+              <a href="" class="act-delete">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                    <path d="M9 10V44H39V10H9Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                    <path d="M20 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4 10H44" stroke="#5e2c2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10L19.289 4H28.7771L32 10H16Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Delete
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Chris Jack</td>
+            <td>2012/01/01</td>
+            <td>Staff</td>
+            <td><span class="stats-active stats-color">Active</span></td>
+            <td>
+              <a href="" class="act-view">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>70 Basic icons by Xicons.co</title>
+                    <path d="M46.86,20.06C43.58,11.9,33.13,5,24,5S4.32,12,1.13,20.28a2,2,0,0,0,0,1.44C4.32,30,14.81,37,24,37s19.54-6.9,22.82-15.06A2,2,0,0,0,47,21.2V20.8A2,2,0,0,0,46.86,20.06Z" fill="#e7e9e9"></path>
+                    <circle cx="24" cy="21" r="5" fill="#231f20"></circle>
+                    <path d="M24,30a9,9,0,1,1,9-9A9,9,0,0,1,24,30Zm0-14a5,5,0,1,0,5,5A5,5,0,0,0,24,16Z" fill="#4dbe86"></path>
+                    <circle cx="20" cy="18" r="2" fill="#ffffff"></circle>
+                  </g>
+                </svg>
+                View
+              </a>
+              <a href="" class="act-edit">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      style="fill: #bfd1fd"
+                      d="M357.382,0H54.545C35.838,0,20.673,15.165,20.673,33.873v444.254 c0,18.708,15.165,33.873,33.873,33.873h302.838c18.708,0,33.873-15.165,33.873-33.873V33.873C391.255,15.165,376.09,0,357.382,0z"
+                    ></path>
+                    <path style="opacity: 0.1; enable-background: new" d="M391.255,99.394c-10.762,2.762-20.632,8.355-28.694,16.417L153.007,325.365 l-4.738,149.902l149.903-4.736l93.084-93.083V99.394H391.255z"></path>
+                    <path style="fill: #ff999a" d="M483.12,196.748l-56.33-56.33c-10.942-10.942-28.681-10.942-39.622,0l-31.298,31.296l26.653,69.3 l69.3,26.653l31.298-31.298C494.062,225.429,494.062,207.69,483.12,196.748z"></path>
+                    <polygon style="fill: #ffebbf" points="184.221,439.317 187.353,340.232 217.138,310.446 313.091,406.399 283.306,436.185 "></polygon>
+                    <polygon style="fill: #ffd782" points="283.306,436.185 187.353,340.232 315.416,212.169 382.524,241.014 411.369,308.121 "></polygon>
+                    <rect x="315.764" y="211.31" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 485.226 680.8143)" style="fill: #575866" width="135.7" height="57.208"></rect>
+                    <path
+                      style="opacity: 0.1; enable-background: new"
+                      d="M483.12,196.748l-41.01-41.01c10.942,10.942,10.942,28.681,0,39.622 L242.295,395.174l-56.736,1.793l-1.339,42.348l99.085-3.132L483.119,236.37C494.062,225.429,494.062,207.689,483.12,196.748z"
+                    ></path>
+                  </g>
+                </svg>
+                Edit
+              </a>
+              <a href="" class="act-delete">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                    <path d="M9 10V44H39V10H9Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                    <path d="M20 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4 10H44" stroke="#5e2c2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10L19.289 4H28.7771L32 10H16Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Delete
+              </a>
+            </td>
+          </tr>
+          <tr class="bg-gray">
+            <td class="text-start">Christopher</td>
+            <td>2012/08/23</td>
+            <td>HRD</td>
+            <td><span class="stats-ban stats-color">Banned</span></td>
+            <td>
+              <a href="" class="act-view">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>70 Basic icons by Xicons.co</title>
+                    <path d="M46.86,20.06C43.58,11.9,33.13,5,24,5S4.32,12,1.13,20.28a2,2,0,0,0,0,1.44C4.32,30,14.81,37,24,37s19.54-6.9,22.82-15.06A2,2,0,0,0,47,21.2V20.8A2,2,0,0,0,46.86,20.06Z" fill="#e7e9e9"></path>
+                    <circle cx="24" cy="21" r="5" fill="#231f20"></circle>
+                    <path d="M24,30a9,9,0,1,1,9-9A9,9,0,0,1,24,30Zm0-14a5,5,0,1,0,5,5A5,5,0,0,0,24,16Z" fill="#4dbe86"></path>
+                    <circle cx="20" cy="18" r="2" fill="#ffffff"></circle>
+                  </g>
+                </svg>
+                View
+              </a>
+              <a href="" class="act-edit">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      style="fill: #bfd1fd"
+                      d="M357.382,0H54.545C35.838,0,20.673,15.165,20.673,33.873v444.254 c0,18.708,15.165,33.873,33.873,33.873h302.838c18.708,0,33.873-15.165,33.873-33.873V33.873C391.255,15.165,376.09,0,357.382,0z"
+                    ></path>
+                    <path style="opacity: 0.1; enable-background: new" d="M391.255,99.394c-10.762,2.762-20.632,8.355-28.694,16.417L153.007,325.365 l-4.738,149.902l149.903-4.736l93.084-93.083V99.394H391.255z"></path>
+                    <path style="fill: #ff999a" d="M483.12,196.748l-56.33-56.33c-10.942-10.942-28.681-10.942-39.622,0l-31.298,31.296l26.653,69.3 l69.3,26.653l31.298-31.298C494.062,225.429,494.062,207.69,483.12,196.748z"></path>
+                    <polygon style="fill: #ffebbf" points="184.221,439.317 187.353,340.232 217.138,310.446 313.091,406.399 283.306,436.185 "></polygon>
+                    <polygon style="fill: #ffd782" points="283.306,436.185 187.353,340.232 315.416,212.169 382.524,241.014 411.369,308.121 "></polygon>
+                    <rect x="315.764" y="211.31" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 485.226 680.8143)" style="fill: #575866" width="135.7" height="57.208"></rect>
+                    <path
+                      style="opacity: 0.1; enable-background: new"
+                      d="M483.12,196.748l-41.01-41.01c10.942,10.942,10.942,28.681,0,39.622 L242.295,395.174l-56.736,1.793l-1.339,42.348l99.085-3.132L483.119,236.37C494.062,225.429,494.062,207.689,483.12,196.748z"
+                    ></path>
+                  </g>
+                </svg>
+                Edit
+              </a>
+              <a href="" class="act-delete">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                    <path d="M9 10V44H39V10H9Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                    <path d="M20 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4 10H44" stroke="#5e2c2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10L19.289 4H28.7771L32 10H16Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Delete
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="text-start">Dave Robert</td>
+            <td>2012/03/01</td>
+            <td>Manager</td>
+            <td><span class="stats-pending stats-color">Pending</span></td>
+            <td>
+              <a href="" class="act-view">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>70 Basic icons by Xicons.co</title>
+                    <path d="M46.86,20.06C43.58,11.9,33.13,5,24,5S4.32,12,1.13,20.28a2,2,0,0,0,0,1.44C4.32,30,14.81,37,24,37s19.54-6.9,22.82-15.06A2,2,0,0,0,47,21.2V20.8A2,2,0,0,0,46.86,20.06Z" fill="#e7e9e9"></path>
+                    <circle cx="24" cy="21" r="5" fill="#231f20"></circle>
+                    <path d="M24,30a9,9,0,1,1,9-9A9,9,0,0,1,24,30Zm0-14a5,5,0,1,0,5,5A5,5,0,0,0,24,16Z" fill="#4dbe86"></path>
+                    <circle cx="20" cy="18" r="2" fill="#ffffff"></circle>
+                  </g>
+                </svg>
+                View
+              </a>
+              <a href="" class="act-edit">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" fill="#000000" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      style="fill: #bfd1fd"
+                      d="M357.382,0H54.545C35.838,0,20.673,15.165,20.673,33.873v444.254 c0,18.708,15.165,33.873,33.873,33.873h302.838c18.708,0,33.873-15.165,33.873-33.873V33.873C391.255,15.165,376.09,0,357.382,0z"
+                    ></path>
+                    <path style="opacity: 0.1; enable-background: new" d="M391.255,99.394c-10.762,2.762-20.632,8.355-28.694,16.417L153.007,325.365 l-4.738,149.902l149.903-4.736l93.084-93.083V99.394H391.255z"></path>
+                    <path style="fill: #ff999a" d="M483.12,196.748l-56.33-56.33c-10.942-10.942-28.681-10.942-39.622,0l-31.298,31.296l26.653,69.3 l69.3,26.653l31.298-31.298C494.062,225.429,494.062,207.69,483.12,196.748z"></path>
+                    <polygon style="fill: #ffebbf" points="184.221,439.317 187.353,340.232 217.138,310.446 313.091,406.399 283.306,436.185 "></polygon>
+                    <polygon style="fill: #ffd782" points="283.306,436.185 187.353,340.232 315.416,212.169 382.524,241.014 411.369,308.121 "></polygon>
+                    <rect x="315.764" y="211.31" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 485.226 680.8143)" style="fill: #575866" width="135.7" height="57.208"></rect>
+                    <path
+                      style="opacity: 0.1; enable-background: new"
+                      d="M483.12,196.748l-41.01-41.01c10.942,10.942,10.942,28.681,0,39.622 L242.295,395.174l-56.736,1.793l-1.339,42.348l99.085-3.132L483.119,236.37C494.062,225.429,494.062,207.689,483.12,196.748z"
+                    ></path>
+                  </g>
+                </svg>
+                Edit
+              </a>
+              <a href="" class="act-delete">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="24px">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                    <path d="M9 10V44H39V10H9Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                    <path d="M20 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M28 20V33" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4 10H44" stroke="#5e2c2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10L19.289 4H28.7771L32 10H16Z" fill="#da4949" stroke="#5e2c2c" stroke-width="4" stroke-linejoin="round"></path>
+                  </g>
+                </svg>
+                Delete
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
