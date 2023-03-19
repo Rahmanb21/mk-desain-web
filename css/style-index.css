@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url(/images/background-pattern.png), url(/images/background-pattern-2.png);
+  background-image: url("../images/background-pattern.png"), url("../images/background-pattern-2.png");
   background-position: right top, left bottom;
   background-repeat: no-repeat;
   background-size: 50%, 70%;
