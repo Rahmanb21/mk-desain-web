@@ -7,10 +7,7 @@
 }
 
 body {
-<<<<<<< HEAD
   font-family: "Inter", sans-serif;
-=======
->>>>>>> cc63438c104ae4c99d3b59bd00e5e4b352dc93e7
   background-image: url("../images/background-pattern.png"), url("../images/background-pattern-2.png");
   background-position: right top, left bottom;
   background-repeat: no-repeat;
